@@ -14,7 +14,13 @@ namespace NetFlask.DAL.Repository
 		{
 		}
 
-		public void Delete(int id)
+		//inutilisable en cas réel, n'est la que pour l'exemple de l'injection de dépendance
+        public MovieRepository() : base("")
+        {
+            
+        }
+
+        public void Delete(int id)
 		{
 			throw new NotImplementedException();
 		}
@@ -36,7 +42,18 @@ namespace NetFlask.DAL.Repository
 
 		public void Insert(MoviesEntity entity)
 		{
-			throw new NotImplementedException();
+			string query = "INSERT INTO Movies (Title, Description, PicturePath, ReleaseDate, Rating) " +
+				"VALUES (@Title, @Description, @PicturePath, @ReleaseDate, @Rating)";
+
+			Dictionary<string, object> parameters = new Dictionary<string, object>();
+			parameters.Add("Title", entity.Title);
+			parameters.Add("Description", entity.Description);
+			parameters.Add("PicturePath", entity.PicturePath);
+			parameters.Add("ReleaseDate", entity.ReleaseDate);
+			parameters.Add("Rating", entity.Rating);
+
+			if (!Create(query, parameters))
+				throw new InvalidOperationException("Ca marche pas");
 		}
 
 		public MoviesEntity MapperToEntity(IDataRecord record)

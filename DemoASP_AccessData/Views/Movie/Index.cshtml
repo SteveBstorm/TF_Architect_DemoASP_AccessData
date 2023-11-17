@@ -1,0 +1,20 @@
+﻿@using NetFlask.DAL.Repository.Entities
+@model IEnumerable<NetFlask.DAL.Repository.Entities.MoviesEntity>
+
+<h3>Liste des films</h3>
+<table class="table">
+    <tr>
+        <th>Titre</th>
+        <th>Rating</th>
+        <th>Actions</th>
+    </tr>
+   
+    @foreach(MoviesEntity m in Model)
+    {
+        <tr>
+            <td>@m.Title</td>
+            <td>@m.Rating</td>
+            <td><a asp-action="Details" asp-route-id="@m.IdMovie" class="btn btn-outline-info">Detail</a></td>
+        </tr>
+    }
+</table>

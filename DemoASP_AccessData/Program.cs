@@ -13,6 +13,15 @@ string cnstr = builder.Configuration.GetConnectionString("Dev");
 builder.Services.AddScoped<IRepository<MoviesEntity, int>>((i) => new MovieRepository(cnstr));
 builder.Services.AddScoped<IRepository<GenreEntity, int>>((i) => new GenreRepository(cnstr));
 
+//builder.Services.AddSingleton<IRepository<MoviesEntity, int>>((i) => new MovieRepository(cnstr));
+//builder.Services.AddTransient<IRepository<MoviesEntity, int>>((i) => new MovieRepository(cnstr));
+
+//Scoped => Une instance par client qui reste la même durant toute la vie client
+//Singleton  => Une seule et unique instance pour la durée de vie de l'application (peut provoquer des ralentissements)
+//Transient => Une instance créée à chaque demande (peut être très gourmand en ressource)
+
+//builder.Services.AddScoped<IRepository<MoviesEntity, int>, MovieRepository>();
+
 
 var app = builder.Build();
 

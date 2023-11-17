@@ -49,5 +49,18 @@ namespace NetFlask.DAL.Repository
 
 			return LEntity;
 		}
+
+		protected bool Create(string sql, Dictionary<string, object> parameters)
+		{
+			bool Result = false;
+
+			if(connection.Connect())
+			{
+				Result = connection.Execute(sql, parameters);
+				connection.Disconnect();
+				Result = true;
+			}
+			return Result;
+		}
 	}
 }

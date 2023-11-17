@@ -134,12 +134,15 @@ namespace NetFlask.DAL
 				//4- ajout de la requête dans la commande
 				oCmd.CommandText = sql;
 				//5- Si il y a des paramètres, je les ajoutes dans la commande
-				foreach (KeyValuePair<string, object> kvp in parameters)
+				if (parameters != null)
 				{
-					DbParameter parametre = oCmd.CreateParameter();
-					parametre.ParameterName = kvp.Key;
-					parametre.Value = kvp.Value;
-					oCmd.Parameters.Add(parametre);
+					foreach (KeyValuePair<string, object> kvp in parameters)
+					{
+						DbParameter parametre = oCmd.CreateParameter();
+						parametre.ParameterName = kvp.Key;
+						parametre.Value = kvp.Value;
+						oCmd.Parameters.Add(parametre);
+					}
 				}
 				//6- Si c'est une procédure stockée, je change le command type
 				oCmd.CommandType = isStoredProc ? System.Data.CommandType.StoredProcedure : System.Data.CommandType.Text;

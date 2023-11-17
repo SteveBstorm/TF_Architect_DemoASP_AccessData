@@ -7,5 +7,25 @@
         <input type="text" asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="Description" class="form-label"></label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rating" class="form-label"></label>
+        <input type="number" asp-for="Rating" class="form-control" />
+        <span asp-validation-for="Rating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PicturePath" class="form-label"></label>
+        <input type="text" asp-for="PicturePath" class="form-control" />
+        <span asp-validation-for="PicturePath" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate" class="form-label"></label>
+        <input type="date" asp-for="ReleaseDate" class="form-control" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
     <input type="submit" value="Valider" class="btn btn-outline-success" />
 </form>
