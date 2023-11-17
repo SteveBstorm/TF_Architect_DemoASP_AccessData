@@ -14,5 +14,6 @@ namespace DemoASP_AccessData.Models.FormModels
 		public DateTime ReleaseDate { get; set; }
 		[Range(0.0, 10.0)]
 		public double Rating { get; set; }
-	}
+        public string Description { get; set; }
+    }
 }
