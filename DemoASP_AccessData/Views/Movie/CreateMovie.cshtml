@@ -1,0 +1,11 @@
+﻿@model DemoASP_AccessData.Models.FormModels.CreateMovieForm
+
+<form asp-action="CreateMovie">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title" class="form-label"></label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Valider" class="btn btn-outline-success" />
+</form>

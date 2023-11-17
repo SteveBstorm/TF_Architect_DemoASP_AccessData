@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoASP_AccessData", "DemoASP_AccessData\DemoASP_AccessData.csproj", "{90FA9DE2-4CA7-4137-900C-BC6EAD8DDA85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetFlask.DAL", "NetFlask.DAL\NetFlask.DAL.csproj", "{8BC4D488-E9EC-455A-8503-8DCEF95B714A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90FA9DE2-4CA7-4137-900C-BC6EAD8DDA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FA9DE2-4CA7-4137-900C-BC6EAD8DDA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FA9DE2-4CA7-4137-900C-BC6EAD8DDA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FA9DE2-4CA7-4137-900C-BC6EAD8DDA85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC4D488-E9EC-455A-8503-8DCEF95B714A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC4D488-E9EC-455A-8503-8DCEF95B714A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC4D488-E9EC-455A-8503-8DCEF95B714A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC4D488-E9EC-455A-8503-8DCEF95B714A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5342E36-B746-41D6-AE2C-EC649C1EEFEB}
+	EndGlobalSection
+EndGlobal
